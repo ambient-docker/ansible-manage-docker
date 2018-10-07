@@ -1,0 +1,13 @@
+---
+- name: Get
+  hosts:  all
+  become: true
+  tasks:
+    - name: Create container
+      docker_container:
+        name: mydata
+        image: busybox
+        volumes:
+          - /data
+...
+
