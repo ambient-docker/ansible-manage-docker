@@ -1,9 +1,9 @@
 ---
-- name: Get
+- name: Get a busybox image using ansible
   hosts:  all
   become: true
   tasks:
-    - name: Create container
+    - name: Get the image with docker_container command
       docker_container:
         name: mydata
         image: busybox
